@@ -6,5 +6,5 @@ export VBOX="virtualbox-guest-modules-arch virtualbox-guest-utils"
 export GNOME="gnome gnome-tweak-tool"
 export KDE="plasma kdebase kde-l10n-es okular gwenview spectacle"
 export I3="i3 feh compton rofi wicd-gtk qterminal dmenu lxdm lxappearance"
-export NVIDIA="nvidia bumblebee"
+export NVIDIA="nvidia" # Removed: bumblebee
 export FONTS="cantarell-fonts ttf-hack"

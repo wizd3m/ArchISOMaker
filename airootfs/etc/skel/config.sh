@@ -1,7 +1,7 @@
 source $PWD/env.sh
 
 echo "+++ Linking zoneinfo... +++"
-ln -s /usr/share/zoneinfo/America/Santiago /etc/localtime -f
+ln -s /usr/share/zoneinfo/${TIMEZONE} /etc/localtime -f
 
 echo "+++ Setting time... +++"
 hwclock --systohc --utc
@@ -47,8 +47,8 @@ passwd
 
 echo ""
 echo "+++ Creating '${USERNAME}' account... +++"
-useradd -m -G wheel -s /bin/zsh $USERNAME 
-passwd $USERNAME 
+useradd -m -G wheel -s /bin/zsh $USERNAME
+passwd $USERNAME
 
 echo ""
 echo "+++ Enabling sudo for '${USERNAME}'... +++"
@@ -76,4 +76,3 @@ echo "+++  Finished! Will reboot in 3 seconds...  +++"
 echo "+++                                         +++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++"
 exit
-
