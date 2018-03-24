@@ -31,7 +31,7 @@ install_system() {
         PACKAGES="$PACKAGES virtualbox-guest-modules-arch virtualbox-guest-utils"
     elif [[ $XORG_DRIVERS == "nvidia" ]]
     then
-        PACKAGES="$PACKAGES nvidia bumblebee"
+        PACKAGES="$PACKAGES nvidia" # Removed: bumblebee
     elif [[ $XORG_DRIVERS == "amd" ]]
     then
         PACKAGES="$PACKAGES xf86-video-amdgpu"
